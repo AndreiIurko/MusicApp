@@ -22,6 +22,8 @@ jobs:
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2024.3
         with:
+          args: '--apply-fixes'
+          push-fixes: 'branch'
           pr-mode: false
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_391489015 }}
